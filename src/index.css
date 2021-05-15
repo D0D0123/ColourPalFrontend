@@ -11,3 +11,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-img {
+  display: block;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  transition: 200ms;
+}
+
+.main-img:hover {
+  transform: scale(1.01);
+  transition: 200ms;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url(Quicksand-Light.ttf);
+}
+
+.title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 48px;
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(224,44,44,1) 52%, rgba(252,176,69,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text {
+  font-size: large;
+  width: 45%;
+  text-align: center;
+}
+
+hr {
+  width: 90%;
+  margin-top: 50px;
+  opacity: 30%;
+}
+
+.colour-circle {
+  height: 50px;
+  width: 50px;
+  transform: scale(1);
+  transition: 200ms;
+}
+
+.colour-circle:hover {
+  transform: scale(1.1);
+  transition: 200ms;
+}
