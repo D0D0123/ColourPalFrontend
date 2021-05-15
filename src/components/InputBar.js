@@ -7,12 +7,14 @@ function InputBar() {
     return (
             <form>
             <Box display="flex" justifyContent="center">
-                <TextField variant="filled" placeholder="Enter URL"></TextField>
+                <div style={{width: '36%'}}>
+                    <TextField fullWidth='true' variant="filled" placeholder="Enter URL"></TextField>
+                </div>
             </Box>
             <Box m={1.5} display="flex" justifyContent="center">
             <ButtonGroup>
                 <Button startIcon={<CheckCircleIcon/>} variant="contained" color="secondary" size="large">Enter</Button>
-                <Button startIcon={<AddPhotoAlternateIcon/>}variant="contained" color="primary" size="large">Upload Image</Button>
+                <Button startIcon={<AddPhotoAlternateIcon/>} variant="contained" color="primary" size="large">Upload Image</Button>
             </ButtonGroup>
             </Box>
             </form>
