@@ -28,8 +28,6 @@ function ColourCard() {
             <CardActionArea>
                 <CardMedia
                 className={classes.media}
-                image="/static/images/cards/contemplative-reptile.jpg"
-                title="Contemplative Reptile"
                 />
                 <CardContent>
                 <Typography variant="h5" color="textSecondary" component="p">

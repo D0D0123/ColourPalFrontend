@@ -1,6 +1,7 @@
 import { Button, ButtonGroup, TextField, Grid, Paper, Input, Container} from '@material-ui/core';
 import { flexbox, spacing} from '@material-ui/system';
 import './App.css';
+import { useState, setState } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import InputBar from './components/InputBar.js'
@@ -23,7 +24,6 @@ function App() {
       <div className='main-container'>
           <Intro/>
           <InputBar/>
-          <ImageFrame/>
           <Palette/>
           <ColourCard/>
       </div>
