@@ -38,21 +38,18 @@ function InputBar() {
             <form 
             onSubmit={handleSubmit}
             >
-            <Box display="flex" justifyContent="center">
+            {/* <Box display="flex" justifyContent="center">
                 <div style={{width: '36%'}}>
-                    <TextField fullWidth='true' variant="filled" placeholder="Enter Image URL"></TextField>
+                    <TextField 
+                        fullWidth='true' 
+                        variant="filled" 
+                        placeholder="Enter Image URL"
+                        onChange={handleLinkChange}>
+                    </TextField>
                 </div>
-            </Box>
+            </Box> */}
             <Box m={1.5} display="flex" justifyContent="center">
             <ButtonGroup>
-                <Button 
-                    startIcon={<CheckCircleIcon/>} 
-                    variant="contained" 
-                    color="secondary" 
-                    size="large"
-                    type="submit"> 
-                    Enter
-                </Button>
                 <Button 
                     startIcon={<AddPhotoAlternateIcon/>} 
                     variant="contained" 
@@ -60,7 +57,15 @@ function InputBar() {
                     size="large" 
                     component="label"
                     > Upload Image 
-                    <input type="file" hidden accept="image/*" onChange={handleChange}/> 
+                    <input type="file" name='myImage' hidden accept="image/*" onChange={handleChange}/> 
+                </Button>
+                <Button 
+                    startIcon={<CheckCircleIcon/>} 
+                    variant="contained" 
+                    color="secondary" 
+                    size="large"
+                    type="submit"> 
+                    Enter
                 </Button>
             </ButtonGroup>
             </Box>

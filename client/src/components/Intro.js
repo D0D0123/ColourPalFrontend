@@ -21,7 +21,7 @@ function Intro() {
             <h1 className="title"> [ ColourPal ]</h1>
         </Box>
         <Box display="flex" justifyContent="center">
-            <p className="intro-text">ColourPal uses the Google Cloud Vision API to extract and form a palette 
+            <p className="intro-text">ColourPal extracts and forms a palette 
              from the dominant colours of an image.
             </p>
         </Box>
