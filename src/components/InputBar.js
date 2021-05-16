@@ -8,7 +8,7 @@ function InputBar() {
             <form>
             <Box display="flex" justifyContent="center">
                 <div style={{width: '36%'}}>
-                    <TextField fullWidth='true' variant="filled" placeholder="Enter URL"></TextField>
+                    <TextField fullWidth='true' variant="filled" placeholder="Enter Image URL"></TextField>
                 </div>
             </Box>
             <Box m={1.5} display="flex" justifyContent="center">

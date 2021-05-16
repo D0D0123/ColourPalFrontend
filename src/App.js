@@ -10,12 +10,16 @@ import Palette from './components/Palette.js'
 import ColourCard from './components/ColourCard.js'
 import { lightGreen } from '@material-ui/core/colors';
 import Box from '@material-ui/core/Box';
+import ghLogo from "./github-logo.png";
+import shLogo from "./share-logo.png";
 
 
 function App() {
   
   return (
     <div className="bg">
+      <div id="ghlogo"><img src={ghLogo} width='50px'/></div>
+      <div id="sharelogo"><img src={shLogo} width='40px'/></div>
       <div className='main-container'>
           <Intro/>
           <InputBar/>
