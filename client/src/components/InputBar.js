@@ -4,17 +4,19 @@ import Box from '@material-ui/core/Box';
 import AddPhotoAlternateIcon from '@material-ui/icons/AddPhotoAlternate';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import ImageFrame from "./ImageFrame.js";
+import Palette from "./Palette.js";
 import axios from 'axios';
 
 function InputBar() {
     const [filePreview, setFilePreview] = useState(null);
     const [file, setFile] = useState(null);
-    const [filename, setFilename] = useState('');
+    // const [filename, setFilename] = useState('');
+    const [rgbList, setRgbList] = useState([]);
 
     const handleChange = (event) => {
         setFilePreview(URL.createObjectURL(event.target.files[0]));
         setFile(event.target.files[0]);
-        setFilename(event.target.files[0].name);
+        // setFilename(event.target.files[0].name);
     }
 
     const handleSubmit = async (e) => {
@@ -29,7 +31,9 @@ function InputBar() {
             }
         })
         .then(res => { // then print response status
-            console.log(res.statusText)
+            console.log(res.data);
+            setRgbList(res.data.palette);
+            console.log(rgbList);
         })
     }
 
@@ -55,8 +59,8 @@ function InputBar() {
                     variant="contained" 
                     color="primary" 
                     size="large" 
-                    component="label"
-                    > Upload Image 
+                    component="label"> 
+                    Upload Image 
                     <input type="file" name='myImage' hidden accept="image/*" onChange={handleChange}/> 
                 </Button>
                 <Button 
@@ -71,6 +75,7 @@ function InputBar() {
             </Box>
             </form>
             <ImageFrame file={filePreview}/>
+            <Palette rgbList={rgbList}/>
         </Fragment>
     );
 }

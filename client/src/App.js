@@ -24,7 +24,7 @@ function App() {
       <div className='main-container'>
           <Intro/>
           <InputBar/>
-          <Palette/>
+          {/* <Palette/> */}
           <ColourCard/>
       </div>
     </div>
