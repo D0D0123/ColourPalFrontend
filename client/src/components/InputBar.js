@@ -13,24 +13,27 @@ function InputBar() {
     // const [filename, setFilename] = useState('');
     const [rgbList, setRgbList] = useState([]);
 
+    // runs when file input element is changed, sets the image preview and gets the actual file
     const handleChange = (event) => {
         setFilePreview(URL.createObjectURL(event.target.files[0]));
         setFile(event.target.files[0]);
         // setFilename(event.target.files[0].name);
     }
 
+    // runs when form element is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         const formData = new FormData();
         formData.append('file', file);
-        
+
+        // use axios library to send formData (including image file) to localhost:8000
         await axios.post("http://localhost:8000/upload", formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         })
-        .then(res => { // then print response status
+        .then(res => { 
             console.log(res.data);
             setRgbList(res.data.palette);
             console.log(rgbList);

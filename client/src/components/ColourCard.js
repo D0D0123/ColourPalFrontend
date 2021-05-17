@@ -28,10 +28,12 @@ function ColourCard(props) {
     console.log(props.rgbList);
     console.log(props.palKey);
     // setRgbObj(props.rgbList[props.palKey]);
+
+    // gets the rgb dict from the passed in rgbList and key
     const rgbObj = props.rgbList[props.palKey];
     console.log(rgbObj);
     
-    const [rVal, gVal, bVal] = [rgbObj['red'], rgbObj['green'], rgbObj['blue']]
+    const [rVal, gVal, bVal] = [rgbObj['red'], rgbObj['green'], rgbObj['blue']];
 
     return (
         <Box display="flex" justifyContent="center" m={5}>
