@@ -11,7 +11,8 @@ import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      maxWidth: 350,
+      width: 300,
       borderRadius: '20px',
       boxShadow: '0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);'
     },

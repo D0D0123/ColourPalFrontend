@@ -4,7 +4,10 @@ import ColourCard from "./ColourCard.js";
 
 function Palette(props) {
 
-    // list of rgb(rVal, gVal, bVal) strings
+    console.log("debug1");
+    console.log(props.rgbList);
+
+    // list of rgb(rVal, gVal, bVal) strings for css styling
     var colourStrs = [];
     // list of keys [0, 1, 2, 3, 4]
     var keyArray = [];
@@ -31,7 +34,7 @@ function Palette(props) {
         { red: 197, green: 76, blue: 178 },
         { red: 190, green: 205, blue: 80 },
         { red: 213, green: 92, blue: 182 }
-      ];
+      ]
 
     // when hovering over a palette square, set the ColourCard colour and key to pass in 
     const handleMouseHover = (event) => {
@@ -44,7 +47,7 @@ function Palette(props) {
         <Fragment>
             <Box m={2}>
                 <Grid container justify="center" spacing={3}>
-                    { // for each int in keyArray, return a palette square with that ID 
+                    { // for each int in keyArray, return and render a palette square with that ID 
                     keyArray.map(i => {
                             return (<Grid item>
                                 <Paper 
@@ -60,13 +63,13 @@ function Palette(props) {
                                 />
                             </Grid>)
                         })
-                    };
+                    }
                 </Grid>
         </Box>
         <ColourCard 
         colour={cardColour} 
         palKey={palKey} 
-        rgbList={props.rgbList !== undefined ? props.rgbList : defaultRgbList}
+        rgbList={(props.rgbList !== undefined && props.rgbList.length !== 0)  ? props.rgbList : defaultRgbList}
         />
       </Fragment>
     );

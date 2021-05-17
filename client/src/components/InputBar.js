@@ -8,7 +8,7 @@ import Palette from "./Palette.js";
 import axios from 'axios';
 
 function InputBar() {
-    const [filePreview, setFilePreview] = useState(null);
+    const [filePreview, setFilePreview] = useState(`./colour-bg.png`);
     const [file, setFile] = useState(null);
     // const [filename, setFilename] = useState('');
     const [rgbList, setRgbList] = useState([]);

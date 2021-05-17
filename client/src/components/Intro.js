@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 //     }
 // })
 
-function Intro() {
+function Intro(props) {
     // const classes = useStyles();
 
     return (
@@ -21,7 +21,7 @@ function Intro() {
             <h1 className="title"> [ ColourPal ]</h1>
         </Box>
         <Box display="flex" justifyContent="center">
-            <p className="intro-text">ColourPal extracts and forms a palette 
+            <p className="intro-text" style={{color: props.textcolour}}>ColourPal extracts and forms a palette 
              from the dominant colours of an image.
             </p>
         </Box>
