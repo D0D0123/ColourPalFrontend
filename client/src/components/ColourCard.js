@@ -1,4 +1,4 @@
-
+import { useState, Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -12,15 +12,26 @@ import Box from '@material-ui/core/Box';
 const useStyles = makeStyles({
     root: {
       maxWidth: 345,
+      borderRadius: '20px',
+      boxShadow: '0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);'
     },
     media: {
       height: 140,
-      backgroundColor: 'purple'
     },
 });
 
-function ColourCard() {
+function ColourCard(props) {
     const classes = useStyles();
+
+    // const [rgbObj, setRgbObj] = useState({"red": 0, "green": 0, "blue": 0})
+    
+    console.log(props.rgbList);
+    console.log(props.palKey);
+    // setRgbObj(props.rgbList[props.palKey]);
+    const rgbObj = props.rgbList[props.palKey];
+    console.log(rgbObj);
+    
+    const [rVal, gVal, bVal] = [rgbObj['red'], rgbObj['green'], rgbObj['blue']]
 
     return (
         <Box display="flex" justifyContent="center" m={5}>
@@ -28,10 +39,11 @@ function ColourCard() {
             <CardActionArea>
                 <CardMedia
                 className={classes.media}
+                style={{ backgroundColor: props.colour }}
                 />
                 <CardContent>
                 <Typography variant="h5" color="textSecondary" component="p">
-                    RGB: 150, 75, 35
+                    {`RGB: ${rVal}, ${gVal}, ${bVal}`}
                 </Typography>
                 <Typography variant="h5" color="textSecondary" component="p">
                     Hex: #FFFFFF
