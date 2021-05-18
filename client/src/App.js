@@ -1,16 +1,8 @@
-import { Button, ButtonGroup, TextField, Grid, Paper, Input, Container, Switch} from '@material-ui/core';
-import { flexbox, spacing} from '@material-ui/system';
 import './App.css';
-import { useState, setState } from 'react';
-
-import { makeStyles } from '@material-ui/core/styles';
+import { Switch} from '@material-ui/core';
+import { useState } from 'react';
 import InputBar from './components/InputBar.js'
-import ImageFrame from './components/ImageFrame.js'
 import Intro from './components/Intro.js'
-import Palette from './components/Palette.js'
-import ColourCard from './components/ColourCard.js'
-import { lightGreen } from '@material-ui/core/colors';
-import Box from '@material-ui/core/Box';
 import ghLogo from "./github-logo.png";
 import shLogo from "./share-logo.png";
 
@@ -34,8 +26,14 @@ function App() {
   return (
     <div className="bg">
       <div id='modeswitch'><Switch size='medium' color='default' onChange={handleModeSwitch}/></div>
-      <div id="ghlogo"><img src={ghLogo} width='50px'/></div>
-      <div id="sharelogo"><img src={shLogo} width='40px'/></div>
+      <div id="ghlogo">
+        <a href="https://github.com/D0D0123/ColourPal">
+        <img src={ghLogo} alt='github-link' width='50px'/>
+        </a>
+      </div>
+      <div id="sharelogo">
+        <img src={shLogo} alt='share-link' width='40px'/>
+      </div>
       <div className='main-container' style={{ backgroundColor: themeColour, transition: '500ms' }}>
           <Intro textcolour={textColour}/>
           <InputBar/>

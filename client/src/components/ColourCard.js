@@ -1,4 +1,3 @@
-import { useState, Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -23,12 +22,9 @@ const useStyles = makeStyles({
 
 function ColourCard(props) {
     const classes = useStyles();
-
-    // const [rgbObj, setRgbObj] = useState({"red": 0, "green": 0, "blue": 0})
     
     console.log(props.rgbList);
     console.log(props.palKey);
-    // setRgbObj(props.rgbList[props.palKey]);
 
     // gets the rgb dict from the passed in rgbList and key
     const rgbObj = props.rgbList[props.palKey];
