@@ -28,7 +28,8 @@ function InputBar() {
         formData.append('file', file);
 
         // use axios library to send formData (including image file) to localhost:8000
-        await axios.post("http://localhost:8000/upload", formData, {
+        // change to 'https://localhost:3001' or another number when working locally
+        await axios.post("https://colour-pal.herokuapp.com/upload", formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

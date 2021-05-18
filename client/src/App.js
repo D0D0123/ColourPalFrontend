@@ -27,7 +27,7 @@ function App() {
     <div className="bg">
       <div id='modeswitch'><Switch size='medium' color='default' onChange={handleModeSwitch}/></div>
       <div id="ghlogo">
-        <a href="https://github.com/D0D0123/ColourPal">
+        <a href="https://github.com/D0D0123/ColourPalFrontend">
         <img src={ghLogo} alt='github-link' width='50px'/>
         </a>
       </div>
