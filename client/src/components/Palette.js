@@ -69,7 +69,7 @@ function Palette(props) {
         <ColourCard 
         colour={cardColour} 
         palKey={palKey} 
-        rgbList={(props.rgbList !== undefined && props.rgbList.length !== 0)  ? props.rgbList : defaultRgbList}
+        rgbList={(props.rgbList !== undefined && props.rgbList.length !== 0) ? props.rgbList : defaultRgbList}
         />
       </Fragment>
     );

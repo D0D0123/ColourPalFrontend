@@ -85,7 +85,7 @@ hr {
 
 #ghlogo { 
   position:absolute; 
-  top:20px; 
+  top:30px; 
   right:100px; 
   transition: 200ms;
 } 
@@ -97,7 +97,7 @@ hr {
 
 #sharelogo { 
   position:absolute; 
-  top:20px; 
+  top:30px; 
   left:100px; 
   transition: 200ms;
 } 
