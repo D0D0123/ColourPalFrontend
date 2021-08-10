@@ -1,3 +1,16 @@
+# ColourPal
+
+A simple web app which extracts and forms a palette from the dominant colours of an image, displaying their RGB values and hexadecimal code.
+
+</br>
+</br>
+<p align="center" >
+  <img src="colourpal_scr.png" />
+  <img src="colourpal_scr2.png" />
+</p>
+</br>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
