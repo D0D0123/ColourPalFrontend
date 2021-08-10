@@ -10,6 +10,9 @@ A simple web app which extracts and forms a palette from the dominant colours of
 </p>
 </br>
 
+## TODO:
+ - [ ] add hexadecimal code support
+ - [ ] fix resolution issues
 
 # Getting Started with Create React App
 
